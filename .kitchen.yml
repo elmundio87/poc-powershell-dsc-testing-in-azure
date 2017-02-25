@@ -4,6 +4,7 @@ driver:
 
 provisioner:
   name: dsc
+  dsc_local_configuration_manager_version: wmf5
 
 verifier:
   name: pester

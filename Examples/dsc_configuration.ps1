@@ -6,6 +6,8 @@ configuration testConfiguration
         [string[]]$NodeName = 'localhost'
     )
 
+    Import-DSCResource -ModuleName testModule
+
     Node $NodeName
     {
         # Install the IIS role
