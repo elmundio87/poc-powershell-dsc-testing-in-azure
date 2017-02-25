@@ -3,7 +3,10 @@ driver:
   name: azurerm
 
 provisioner:
-  name: chef_zero
+  name: dsc
+
+verifier:
+  name: pester
 
 driver_config:
   subscription_id: '694c101b-0583-4c6e-9ec4-794adec74099'
@@ -11,24 +14,22 @@ driver_config:
   machine_size: 'Standard_D1'
 
 platforms:
-  # - name: windows2012-r2
-  #   driver_config:
-  #     image_urn: MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:latest
-  #   transport:
-  #       name: winrm
-  - name: windows2008-r2
+  - name: windows2012-r2
     driver_config:
-      image_urn: MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:latest
-      winrm_powershell_script: |-
-        winrm quickconfig -q
-        winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="512"}'
-        winrm set winrm/config '@{MaxTimeoutms="1800000"}'
-        winrm set winrm/config/service '@{AllowUnencrypted="true"}'
-        winrm set winrm/config/service/auth '@{Basic="true"}'
-      transport:
+      image_urn: MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:latest
+    transport:
         name: winrm
+  # - name: windows2008-r2
+  #   driver_config:
+  #     image_urn: MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:latest
+  #     winrm_powershell_script: |-
+  #       winrm quickconfig -q
+  #       winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="512"}'
+  #       winrm set winrm/config '@{MaxTimeoutms="1800000"}'
+  #       winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+  #       winrm set winrm/config/service/auth '@{Basic="true"}'
+  #     transport:
+  #       name: winrm
   
 suites:
-  - name: default
-    run_list:
-    attributes:
+  - name: testConfiguration
