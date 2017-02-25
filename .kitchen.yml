@@ -10,7 +10,7 @@ verifier:
   name: pester
 
 driver_config:
-  subscription_id: '694c101b-0583-4c6e-9ec4-794adec74099'
+  subscription_id: <%= ENV['AZURERM_SUBSCRIPTION'] %>
   location: 'West Europe'
   machine_size: 'Standard_D1'
 
