@@ -2,9 +2,10 @@ configuration testResource
 {
     param (
         [ValidateSet('Present', 'Absent')]
-        [string] $Ensure = 'Present'
-        [string] $test = "test"
-    )
+        [string] $Ensure = 'Present',
+        [string] $Test = "test",
+        [string] $Name = ""
+     )
     
     # Install the IIS role
     WindowsFeature IIS

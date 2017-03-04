@@ -11,7 +11,7 @@ configuration testConfiguration
     Node $NodeName
     {
         # Install the IIS role
-        WindowsFeature IIS
+        testResource IIS
         {
             Ensure          = "Present"
             Name            = "Web-Server"
