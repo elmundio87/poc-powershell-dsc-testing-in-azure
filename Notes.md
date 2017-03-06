@@ -10,3 +10,5 @@ kitchen test
 ```
 
 If your powershell is failing to compile into a MOF for whatever reason, add the `--log-level=DEBUG` parameter to diagnose.
+
+I have made a PR in the kitchen-dsc repo that should make it easier to diagnose errors without having to run in DEBUG logging mode.
