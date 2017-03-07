@@ -12,5 +12,6 @@ kitchen test
 If your powershell is failing to compile into a MOF for whatever reason, add the `--log-level=DEBUG` parameter to diagnose.
 
 I have made a PR in the kitchen-dsc repo that should make it easier to diagnose errors without having to run in DEBUG logging mode.
+In the meantime, I have pointed the gemfile at my own fork of kitchen-dsc.
 
 Need to consider our options when testing resources that use WSUS urls for hosted installer files.

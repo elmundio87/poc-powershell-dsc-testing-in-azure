@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/elmundio87/kitchen-dsc.git
+  revision: 68ab92dacf0ef03acfb64206a0299614c61ae61a
+  ref: 68ab9
+  specs:
+    kitchen-dsc (0.10.0)
+      dsc_lcm_configuration
+      test-kitchen (>= 1.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -31,9 +40,6 @@ GEM
       azure_mgmt_resources (~> 0.5, >= 0.5.0)
       inifile (~> 3.0, >= 3.0.0)
       sshkey (~> 1, >= 1.0.0)
-    kitchen-dsc (0.10.0)
-      dsc_lcm_configuration
-      test-kitchen (>= 1.9)
     kitchen-pester (0.7.1)
       test-kitchen (~> 1.4)
     kitchen-vagrant (1.0.2)
@@ -103,7 +109,7 @@ PLATFORMS
 
 DEPENDENCIES
   kitchen-azurerm
-  kitchen-dsc
+  kitchen-dsc!
   kitchen-pester
   kitchen-vagrant
   test-kitchen
