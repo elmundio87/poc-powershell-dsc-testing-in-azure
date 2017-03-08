@@ -6,7 +6,7 @@ configuration testConfiguration
         [string[]]$NodeName = 'localhost'
     )
 
-    Import-DSCResource -ModuleName testModule
+    Import-DSCResource -ModuleName poc-powershell-dsc-testing-in-azure
 
     Node $NodeName
     {
